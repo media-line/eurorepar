@@ -1,0 +1,573 @@
+/* ========================================================================
+   Стили шрифтов / Font styles
+======================================================================== */
+@font-face {
+	font-family: 'iconfont';
+	src:  url('../fonts/iconfont.eot?3ec9kc');
+	src:  url('../fonts/iconfont.eot?3ec9kc#iefix') format('embedded-opentype'),
+	url('../fonts/iconfont.ttf?3ec9kc') format('truetype'),
+	url('../fonts/iconfont.woff?3ec9kc') format('woff'),
+	url('../fonts/iconfont.svg?3ec9kc#iconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'iconfont' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-search:before {
+	content: "\e904";
+}
+.icon-facebook-logo-button:before {
+	content: "\e900";
+}
+.icon-google-plus-logo-button:before {
+	content: "\e901";
+}
+.icon-twitter:before {
+	content: "\e902";
+}
+.icon-youtube-logotype:before {
+	content: "\e903";
+}
+/* ========================================================================
+   Общие стили / Common styles
+======================================================================== */
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #636363;
+}
+a, a:hover, a:focus{
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+.text-smallest{
+	font-size: 12px;
+	line-height: 14px;
+}
+.text-smaller{
+	font-size: 13px;
+	line-height: 14px;
+}
+.text-small{
+	font-size: 14px;
+	line-height: 16px;
+}
+.text-usual{
+	font-size: 16px;
+	line-height: 20px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	margin-bottom: 0;
+}
+h4,
+.h4,
+.text-large{
+	font-size: 18px;
+	line-height: 24px;
+}
+h3,
+.h3{
+	font-size: 20px;
+	line-height: 26px;
+}
+h2,
+.h2{
+	font-size: 24px;
+	line-height: 32px;
+}
+h1,
+.h1{
+	font-size: 30px;
+	line-height: 40px;
+}
+.text-contrast{
+	color: #fff;
+}
+.text-dark{
+	color: #1f1f1f;
+}
+.text-orange{
+	color: #ff4800;
+}
+.text-bold{
+	font-weight: 700;
+}
+.margin-top{
+	margin-top: 10px;
+}
+.margin-bottom{
+	margin-bottom: 10px;
+}
+.margin-top-medium{
+	margin-top: 15px;
+}
+.margin-bottom-medium{
+	margin-bottom: 15px;
+}
+.margin-top-large{
+	margin-top: 40px;
+}
+.margin-bottom-large{
+	margin-bottom: 40px;
+}
+.position-relative{
+	position: relative;
+}
+.position-absolute{
+	position: absolute;
+}
+hr{
+	border-color: #dcdcdc;
+}
+/*Кнопки*/
+.button{
+	line-height: 28px;
+	padding: 0 15px;
+	display: inline-block;
+	background: #ff4800;
+	color: #fff;
+	text-align: center;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.button-large{
+	line-height: 58px;
+	padding: 0 20px;
+	font-size: 24px;
+	font-weight: 700;
+}
+/*Формы*/
+::-webkit-input-placeholder {color: #1f1f1f; opacity: 1; transition: 0.2s ease}
+::-moz-placeholder          {color: #1f1f1f; opacity: 1; transition: 0.2s ease}
+:-moz-placeholder           {color: #1f1f1f; opacity: 1; transition: 0.2s ease}
+:-ms-input-placeholder      {color: #1f1f1f; opacity: 1; transition: 0.2s ease}
+:focus::-webkit-input-placeholder {opacity: 0; transition: 0.2s ease}
+:focus::-moz-placeholder          {opacity: 0; transition: 0.2s ease}
+:focus:-moz-placeholder           {opacity: 0; transition: 0.2s ease}
+:focus:-ms-input-placeholder      {opacity: 0; transition: 0.2s ease}
+.form-input{
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	box-sizing: border-box;
+}
+/* ========================================================================
+  Стили шапки/ Header styles
+======================================================================== */
+.header{
+	background: #1f1f1f;
+}
+.header-left{
+	padding: 20px 60px 20px 0;
+	background: #fff;
+	min-height: 123px;
+}
+.header-left:before,
+.header-center:before,
+.header-right:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 100%;
+	width: 60px;
+	background: #fff;
+}
+.header-left:after,
+.header-center:after,
+.header-right:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -61.5px;
+	left: -60px;
+	width: 0; height: 0;
+	border-top: 61.5px solid transparent;
+	border-left: 36px solid #1f1f1f;
+	border-bottom: 61.5px solid transparent;
+}
+.header-left a,
+.header-left img{
+	max-width: 100%;
+}
+.header-center{
+	padding: 15px 80px 15px 0;
+}
+.header-center,
+.header-center:before{
+	background: #ff4800;
+}
+.header-center:after{
+	border-left-color: #fff;
+}
+.header-right{
+	padding: 10px 0;
+}
+.header-right:before{
+	background: #1f1f1f;
+}
+.header-right:after{
+	border-left-color: #ff4800;
+}
+.header-socials,
+.header-socials-link{
+	line-height: 1;
+}
+.header-socials-link{
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+}
+.header-socials-link + .header-socials-link{
+	margin-left: 5px;
+}
+.header-socials-link:after{
+	content: "";
+	color: rgba(255, 255, 255, 0.25);
+	font-family: 'iconfont';
+	font-size: 26px;
+	transition: all 0.2s ease;
+}
+.header-socials-link-facebook:after{
+	content: "\e900";
+}
+.header-socials-link-twitter:after{
+	content: "\e901";
+}
+.header-socials-link-google:after{
+	content: "\e902";
+}
+.header-socials-link-youtube:after{
+	content: "\e903";
+}
+.header-socials-link:hover:after{
+	color: #fff;
+	transition: all 0.2s ease;
+}
+.header-phones-list{
+	list-style: none;
+	margin: 0;
+	line-height: 1;
+}
+/* ========================================================================
+  Стили шапки/ Header styles
+======================================================================== */
+.navbar{
+	background: #d9dadc;
+	padding-left: 0;
+	padding-right: 0;
+}
+.main-menu{
+	list-style: none;
+}
+.main-menu li{
+	display: inline-block;
+}
+.main-menu li + li{
+	margin-left: 30px;
+}
+.main-menu a{
+	color: #1f1f1f;
+	text-transform: uppercase;
+}
+.form-input,
+.navbar-toggler,
+.form-search-button{
+	outline: none !important;
+}
+.navbar-toggler{
+	cursor: pointer;
+	padding: 0 10px;
+	width: 55px;
+	height: 36px;
+	border: none;
+	top: 7px;
+	right: 5px;
+}
+.navbar-toggler span{
+	height: 4px;
+	position: absolute;
+	background: #1f1f1f;
+	left: 10px;
+	right: 10px;
+	opacity: 1;
+	transition: transform 0.5s ease;
+}
+.navbar-toggler.collapsed span{
+	transition: transform 0.5s ease;
+}
+.navbar-toggler span:nth-child(1){
+	top: 5px;
+}
+.navbar-toggler span:nth-child(2){
+	top: 15px;
+}
+.navbar-toggler span:nth-child(3){
+	top: 25px;
+}
+.navbar-toggler:not(.collapsed) span:nth-child(1){
+	top: 13px;
+	transform: rotate(-45deg);
+}
+.navbar-toggler:not(.collapsed) span:nth-child(2){
+	opacity: 0;
+}
+.navbar-toggler:not(.collapsed) span:nth-child(3){
+	top: 13px;
+	transform: rotate(45deg);
+}
+.search{
+	width: 200px;
+}
+.form-search-input{
+	width: 200px;
+	padding-left: 30px;
+}
+.form-search-button{
+	top: 0;
+	left: 0;
+	background: transparent;
+	border: none;
+	line-height: 28px;
+	color: #1f1f1f;
+	cursor: pointer;
+}
+.form-search-button:after{
+	content: "\e904";
+	font-family: 'iconfont';
+	font-size: 14px;
+}
+/* ========================================================================
+  Стили блока категорий / Categories block styles
+======================================================================== */
+.categories_block-category-text{
+	max-width: 125px;
+}
+/* ========================================================================
+  Стили блока со слайдером / Block with slider styles
+======================================================================== */
+.slick-dots{
+	list-style: none;
+	padding: 0;
+	margin: 5px 0 0 0;
+	text-align: center;
+}
+.slick-dots li{
+	display: inline-block;
+}
+.slick-dots li + li{
+	margin-left: 10px;
+}
+.slick-dots button{
+	background: #e0e0e0;
+	border: none;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	box-shadow: inset 2px 2px 3px 0px rgba(1,1,1,0.2);
+	text-indent: -9999px;
+	border-radius: 100%;
+	outline: none;
+	line-height: 1;
+	transition: all 0.2s ease;
+}
+.slick-dots .slick-active button,
+.slick-dots button:hover{
+	background: #1f1f1f;
+	transition: all 0.2s ease;
+}
+/*Ссылки справа*/
+.links_bars_block{
+	padding-top: 20px;
+}
+.links_bars_block-link{
+	margin-top: 20px;
+	border-radius: 5px;
+	border: solid 1px #a6a6a6;
+	background: #636363;
+	padding: 20px 20px 20px 45px;
+	background: rgb(247,247,247);
+	background: -moz-linear-gradient(top,  rgba(247,247,247,1) 0%, rgba(239,239,239,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(239,239,239,1) 100%);
+	background: linear-gradient(to bottom,  rgba(247,247,247,1) 0%,rgba(239,239,239,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efefef',GradientType=0 );
+}
+.links_bars_block-link-marker{
+	top: 26px;
+	left: 20px;
+	width: 20px;
+	height: 20px;
+	background: url('/images/active-icon.png');
+	background-repeat: no-repeat;
+}
+/* ========================================================================
+  Стили блока табов с преимуществами / Advantages-tabs block styles
+======================================================================== */
+.advantages-switcher-item{
+
+}
+/* ========================================================================
+  Стили футера / Footer styles
+======================================================================== */
+.footer-links_one-list ul,
+.footer-links_two-list ul{
+	margin: 0;
+	padding: 0;
+}
+.footer-links_one-list li,
+.footer-links_two-list li{
+	display: inline-block;
+	position: relative;
+}
+.footer-links_one-list li:before{
+	content: "|";
+	margin-right: 5px;
+}
+.footer-links_two-list li:nth-child(n+2):before{
+	content: "/";
+	margin: 0 7px 0 3px;
+	color: #ff4800;
+}
+.footer-links_one-list a{
+	color: #636363;
+}
+.footer-links_two-list a{
+	color: #1f1f1f;
+}
+.medialine_copyrate-link{
+	color: #ff4800;
+}
+/* ========================================================================
+  Медиа запросы / Media queries
+======================================================================== */
+@media (min-width: 768px){
+	.header-socials,
+	.header-phones-list,
+	.header-phones-link{
+		width: 100%;
+	}
+}
+@media (min-width: 1200px){
+	.container {
+		width: 1250px;
+		max-width: 100%;
+	}
+}
+@media (max-width: 1199px){
+	.header-center {
+		padding: 15px 65px 15px 0;
+	}
+	.header-phones-list{
+		font-size: 17px;
+	}
+}
+@media (max-width: 991px){
+	.w-md-100{
+		width: 100%;
+	}
+	.main-menu li + li {
+		margin-left: 0;
+	}
+	.search{
+		width: 100%;
+	}
+
+
+	.footer-links_one-list li:first-child:before{
+		content: none;
+	}
+}
+@media (max-width: 767px){
+	.w-sm-100{
+		width: 100%;
+	}
+	.header{
+		background: #fff;
+		overflow: hidden;
+	}
+	.header-center {
+		padding: 15px 35px 15px 0;
+	}
+	.header-right{
+		background: #1f1f1f;
+	}
+	.header-left:before,
+	.header-left:after{
+		content: none;
+	}
+	.header-right:before,
+	.header-right:after{
+		width: 100vw;
+		background: #1f1f1f;
+		border: none;
+		top: 0;
+		bottom: 0;
+		margin: 0;
+		height: auto;
+	}
+	.header-right:after{
+		left: 100%;
+	}
+	.navbar-toggleable-sm>.container {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.main-menu li + li {
+		margin-top: 5px;
+	}
+	.search{
+		width: 80%;
+	}
+
+
+	.footer-buttons-button{
+		margin-top: 20px
+	}
+}
+@media (max-width: 575px){
+	.header-socials,
+	.header-phones-list,
+	.header-phones-link{
+		width: 100%;
+	}
+	.header-phones-list,
+	.header-phones-link{
+		margin: 15px 0 0 0 !important;
+	}
+	.navbar-toggleable-sm > .container {
+		min-width: 290px;
+	}
+	.search{
+		width: 70%;
+	}
+
+
+	.footer-links_one-list,
+	.footer-links_two-list{
+		margin-top: 15px
+	}
+	.footer-links_one-list li,
+	.footer-links_two-list li{
+		display: block;
+	}
+	.footer-links_one-list li:before,
+	.footer-links_two-list li:nth-child(n+2):before{
+		content: none;
+	}
+}
