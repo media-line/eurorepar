@@ -69,7 +69,8 @@
 									</ul>
 
 									<div class="header-phones-link text-uppercase text-smaller ml-4 ml-md-4 w-md-100">
-										<a class="text-contrast" href="#">Написать нам</a>
+
+										<a class="text-contrast" href="#" data-toggle="modal" data-target="#feedback_modal">Написать нам</a>
 									</div>
 								</div>
 							</div>
@@ -217,7 +218,7 @@
 				<div class="row">
 					<div class="col-xl-8">
 
-						<div class="slick_slider">
+						<div class="js-slick-slider slick_slider">
 
 								<div class="slick_slider-item">
 									<img class="d-block img-fluid" src="images/slide001.png" alt="First slide"/>
@@ -271,7 +272,7 @@
 			<div class="advantages margin-top-large">
 				<div class="container">
 
-					<div class="h1 text-dark">
+					<div class="h1 text-dark mb-3">
 						Почему стоит выбрать нас?
 					</div>
 
@@ -279,60 +280,123 @@
 						<div class="col-lg-8">
 
 							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane active" id="advantages-tab-1" role="tabpanel">1</div>
-								<div class="tab-pane" id="advantages-tab-2" role="tabpanel">2</div>
-								<div class="tab-pane" id="advantages-tab-3" role="tabpanel">3</div>
-								<div class="tab-pane" id="advantages-tab-4" role="tabpanel">4</div>
+							<div class="advantages-content h-100 position-relative">
+								<div class="advantages-content-tabs position-relative tab-content">
+									<div class="tab-pane fade show active" id="advantages-tab-1" role="tabpanel">
+										<p class="advantages-content-title mb-4 text-orange text-uppercase text-bold text-large">EURO CAR SERVICE REPAR КАК ЧАСТЬ ВАШЕГО БИЗНЕСА.</p>
+
+										<p class="advantages-content-main mb-4 text-bold text-dark">Быстрая поддержка, дружелюбный персонал, тщательное обслуживание и, прежде всего, профессионализм и прозрачность являются минимум, что мв можем вам предложить: наши команды знают, почему вы обращаетесь к нам.</p>
+
+										<p class="advantages-content-additional">В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.</p>
+									</div>
+
+									<div class="tab-pane fade" id="advantages-tab-2" role="tabpanel">
+										<p class="advantages-content-title mb-4 text-orange text-uppercase text-bold text-large">EURO CAR SERVICE REPAR КАК ЧАСТЬ ВАШЕГО БИЗНЕСА.</p>
+
+										<p class="advantages-content-main mb-4 text-bold text-dark">Быстрая поддержка, дружелюбный персонал, тщательное обслуживание и, прежде всего, профессионализм и прозрачность являются минимум, что мв можем вам предложить: наши команды знают, почему вы обращаетесь к нам.</p>
+
+										<p class="advantages-content-additional">В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.</p>
+									</div>
+
+									<div class="tab-pane fade" id="advantages-tab-3" role="tabpanel">
+										<p class="advantages-content-title mb-4 text-orange text-uppercase text-bold text-large">EURO CAR SERVICE REPAR КАК ЧАСТЬ ВАШЕГО БИЗНЕСА.</p>
+
+										<p class="advantages-content-main mb-4 text-bold text-dark">Быстрая поддержка, дружелюбный персонал, тщательное обслуживание и, прежде всего, профессионализм и прозрачность являются минимум, что мв можем вам предложить: наши команды знают, почему вы обращаетесь к нам.</p>
+
+										<p class="advantages-content-additional">В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											</p>
+									</div>
+
+									<div class="tab-pane fade" id="advantages-tab-4" role="tabpanel">
+										<p class="advantages-content-title mb-4 text-orange text-uppercase text-bold text-large">EURO CAR SERVICE REPAR КАК ЧАСТЬ ВАШЕГО БИЗНЕСА.</p>
+
+										<p class="advantages-content-main mb-4 text-bold text-dark">Быстрая поддержка, дружелюбный персонал, тщательное обслуживание и, прежде всего, профессионализм и прозрачность являются минимум, что мв можем вам предложить: наши команды знают, почему вы обращаетесь к нам.</p>
+
+										<p class="advantages-content-additional">В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.</p>
+									</div>
+
+									<div class="tab-pane fade" id="advantages-tab-5" role="tabpanel">
+										<p class="advantages-content-title mb-4 text-orange text-uppercase text-bold text-large">EURO CAR SERVICE REPAR КАК ЧАСТЬ ВАШЕГО БИЗНЕСА.</p>
+
+										<p class="advantages-content-main mb-4 text-bold text-dark">Быстрая поддержка, дружелюбный персонал, тщательное обслуживание и, прежде всего, профессионализм и прозрачность являются минимум, что мв можем вам предложить: наши команды знают, почему вы обращаетесь к нам.</p>
+
+										<p class="advantages-content-additional">В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.
+
+											В Euro Car Service REPAR, нам важно то, чтобы Вы и Ваш автомобиль были в безопасности, несмотря какая у Вас модель автомобиля.</p>
+									</div>
+								</div>
+
+								<div class="advantages-svg-triangle position-absolute">
+									<svg viewBox="0 0 100 19" preserveAspectRatio="none">
+										<polygon points="0,0 0,30 100,30 100,0 50,13"></polygon>
+									</svg>
+								</div>
 							</div>
 						</div>
 
 
 						<div class="col-lg-4">
+
+							<div class="advantages-switcher-title text-uppercase h3 text-bold text-dark mb-3 mt-3 mt-lg-0">
+								Наши преимущества
+							</div>
 							<!-- Nav tabs -->
-							<ul class="advantages-switcher nav flex-lg-column" role="tablist">
-								<li class="advantages-switcher-item d-block mb-lg-2">
+							<ul class="advantages-switcher nav flex-lg-column flex-wrap" role="tablist">
+								<li class="advantages-switcher-item nav-item d-block mb-2">
 									<a class="button active" data-toggle="tab" href="#advantages-tab-1" role="tab">Добро пожаловать</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-3" role="tab">Совет</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-2" role="tab">Совет</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-4" role="tab">Доверие</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-3" role="tab">Доверие</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-5" role="tab">Качество</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-4" role="tab">Качество</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-6" role="tab">Обязательство</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-5" role="tab">Обязательство</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-7" role="tab">Качество / компетентность / цена</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-6" role="tab">Качество / компетентность / цена</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-8" role="tab">близость / объект</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-7" role="tab">близость / объект</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-9" role="tab">Безопасность</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-8" role="tab">Безопасность</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-10" role="tab">Уважение к окружающей среде</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-9" role="tab">Уважение к окружающей среде</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-11" role="tab">Прозрачность</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-10" role="tab">Прозрачность</a>
 								</li>
 
-								<li class="advantages-switcher-item d-block mb-lg-2">
-									<a class="button" data-toggle="tab" href="#advantages-tab-12" role="tab">Сеть 2.0</a>
+								<li class="advantages-switcher-item nav-item d-block mb-2">
+									<a class="button" data-toggle="tab" href="#advantages-tab-11" role="tab">Сеть 2.0</a>
 								</li>
 							</ul>
 						</div>
@@ -344,20 +408,202 @@
 
 		<main>
 			<aside></aside>
-
 		</main>
 
 		<section class="bottom-a">
+			<div class="news_block margin-top-large">
+				<div class="container">
+					<div class="d-flex justify-content-between">
+						<div class="news_block-title h1 text-dark">
+							Новости
+						</div>
 
+						<div class="news_block-link text-dark">
+							<a href="#">Все новости</a>
+						</div>
+					</div>
+					<div class="news_block-list row">
+						<div class="col-lg-4">
+							<div class="news_block-list-item mt-3">
+								<div class="news_block-list-item-image mb-3">
+									<a href="#" class="d-block position-relative" style="background-image: url('images/news1.jpg');"></a>
+								</div>
+								<a href="#" class="news_block-list-item-title text-bold text-orange text-uppercase">
+									Международный автомобиль 2016
+								</a>
+								<div class="news_block-list-item-text mt-3 text-dark">
+									Парижский автосалон 2016:  "EURO Авторемонт  & Радио партнеры безопасности VINCI Autoroutes"
+								</div>
+								<div class="news_block-list-item-date mt-3 text-small">
+									27.12.2016
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="news_block-list-item mt-3">
+								<div class="news_block-list-item-image mb-3">
+									<a href="#" class="d-block position-relative" style="background-image: url('images/news2.jpg');"></a>
+								</div>
+								<a href="#" class="news_block-list-item-title mt-3 text-bold text-orange text-uppercase">
+									Акции по безопасности
+								</a>
+								<div class="news_block-list-item-text mt-3 text-dark">
+									-10% На Дворники *  BRAKE PADS * ОСВЕЩЕНИЯ
+								</div>
+								<div class="news_block-list-item-date mt-3 text-small">
+									24.12.2016
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="news_block-list-item mt-3">
+								<div class="news_block-list-item-image mb-3">
+									<a href="#" class="d-block position-relative" style="background-image: url('images/news3.jpg');"></a>
+								</div>
+								<a href="#" class="news_block-list-item-title mt-3 text-bold text-orange text-uppercase">
+									Специальные шины kleber
+								</a>
+								<div class="news_block-list-item-text mt-3 text-dark">
+									ШИНЫ KLEBER 54,99 € TTC * 185/65 R 15 88T  Dynaxer HP3
+								</div>
+								<div class="news_block-list-item-date mt-3 text-small">
+									19.12.2016
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section class="bottom-b">
+			<div class="map_block">
+				<div class="container">
+					<div class="map_block-title h1 text-dark mb-3 text-center">
+						Наш сервис на карте
+					</div>
 
+					<div class="yandexmap">
+						<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+						<script type="text/javascript">
+							ymaps.ready(init);
+
+							function init () {
+								var map = new ymaps.Map('map_block-map', {
+										center: [53.889592, 27.562298],
+										zoom: 17
+									}, {
+										searchControlProvider: 'yandex#search'
+									}),
+									counter = 0,
+
+								// Создание макета содержимого балуна.
+								// Макет создается с помощью фабрики макетов с помощью текстового шаблона.
+									BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+										'<div style="margin: 10px;">' +
+										'<b>{{properties.name}}</b>' +
+										'</div>', {
+
+										});
+
+								var placemark = new ymaps.Placemark([53.889592, 27.562298], {
+									name: 'Минск, Свердлова, 23'
+								}, {
+									balloonContentLayout: BalloonContentLayout,
+									// Запретим замену обычного балуна на балун-панель.
+									// Если не указывать эту опцию, на картах маленького размера откроется балун-панель.
+									balloonPanelMaxMapArea: 0,
+									iconLayout: 'default#image',
+									iconImageHref: 'images/map-marker.png',
+									iconImageSize: [67, 88],
+									iconImageOffset: [-33.5, -88]
+								});
+
+								map.geoObjects.add(placemark);
+							}
+						</script>
+
+						<div id="map_block-map" class="map_block-map w-100"></div>
+
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+		<section class="bottom-c">
+
+			<div class="car_brands margin-top-large">
+				<div class="container">
+					<div class="car_brands-title h1 text-dark text-center margin-bottom-large">
+						Обслуживаемые марки авто
+					</div>
+
+					<ul class="js-slick-slideset slick_slideset">
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/mersedes.png" alt="First slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/peugeot.png" alt="Second slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/mitsubisi.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/audi.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/volkswagen.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/nissan.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/bmw.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/mazda.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/hyundai.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/toyota.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/honda.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/fiat.png" alt="Third slide"/>
+						</li>
+
+						<li class="slick_slideset-item">
+							<img class="d-block img-fluid" src="images/ford.png" alt="Third slide"/>
+						</li>
+
+					</ul>
+				</div>
+			</div>
 		</section>
 
 		<footer class="footer">
 			<div class="container">
-				<div class="footer-buttons margin-top-large">
+				<div class="footer-buttons">
 					<div class="row">
 						<div class="footer-buttons-button col-md-6 ">
 							<a href="#" class="button button-large w-100">Заказать звонок</a>
@@ -404,6 +650,33 @@
 
 			</div>
 		</footer>
+
+		<!-- Modal -->
+		<div class="modal fade feedback_modal" id="feedback_modal" tabindex="-1" role="dialog" aria-labelledby="feedback_modal" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+
+					<div class="modal-body">
+						<form class="feedback_modal-form">
+							<div class="feedback_modal-form-title h2 text-center text-dark text-bold mb-4">
+								Написать нам
+							</div>
+							<input name="name" type="text" placeholder="Ваше имя:" value=""/>
+							<input name="email" type="text" placeholder="Ваш e-mail:" value=""/>
+							<textarea name="message" placeholder="Ваше сообшение:"></textarea>
+							<div class="text-center mt-3">
+								<button type="submit" class="button">Отправить</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 	</body>
 
 </html>

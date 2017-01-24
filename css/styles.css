@@ -26,6 +26,12 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.icon-left-arrow:before {
+	content: "\e905";
+}
+.icon-right-arrow:before {
+	content: "\e906";
+}
 .icon-search:before {
 	content: "\e904";
 }
@@ -145,6 +151,17 @@ hr{
 	text-align: center;
 	font-size: 13px;
 	text-transform: uppercase;
+	border: 1px solid #ff4800;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.button:focus{
+	color: #fff;
+}
+.button:hover{
+	background: transparent;
+	color: #ff4800;
+	transition: all 0.2s ease;
 }
 .button-large{
 	line-height: 58px;
@@ -161,11 +178,51 @@ hr{
 :focus::-moz-placeholder          {opacity: 0; transition: 0.2s ease}
 :focus:-moz-placeholder           {opacity: 0; transition: 0.2s ease}
 :focus:-ms-input-placeholder      {opacity: 0; transition: 0.2s ease}
+form input,
+form textarea,
 .form-input{
 	height: 30px;
 	line-height: 30px;
 	border: none;
 	box-sizing: border-box;
+	outline: none;
+	border: 1px solid #d0d0d0;
+	padding-left: 10px;
+	width: 100%;
+}
+form textarea{
+	height: 90px;
+}
+form input + input,
+form input + textarea,
+form textarea + input,
+form button + input,
+form input + button {
+	margin-top: 15px;
+}
+.search input{
+	border: none;
+}
+.search button{
+	margin: 0;
+}
+/*Модальные окна*/
+.close{
+	outline: none !important;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #ff4800;
+	cursor: pointer;
+	font-size: 26px;
+	opacity: 1;
+	z-index: 2;
+	transition: all 0.5s ease;
+}
+.close:hover{
+	opacity: 1;
+	/*transform: rotate(90deg);*/
+	transition: all 0.5s ease;
 }
 /* ========================================================================
   Стили шапки/ Header styles
@@ -265,6 +322,15 @@ hr{
 	margin: 0;
 	line-height: 1;
 }
+.header-phones{
+	outline: none;
+}
+.header-phones a:focus{
+	color: #fff;
+}
+.header-phones a:hover{
+	color: #ff4800;
+}
 /* ========================================================================
   Стили шапки/ Header styles
 ======================================================================== */
@@ -284,7 +350,13 @@ hr{
 }
 .main-menu a{
 	color: #1f1f1f;
+	font-size: 12px;
 	text-transform: uppercase;
+	border-bottom: 2px solid transparent;
+}
+.main-menu a:hover,
+.main-menu .active a{
+	border-color: #ff4800;
 }
 .form-input,
 .navbar-toggler,
@@ -356,12 +428,27 @@ hr{
 /* ========================================================================
   Стили блока категорий / Categories block styles
 ======================================================================== */
+.categories_block-category a{
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+.categories_block-category a:hover{
+	transition: all 0.3s ease;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+}
 .categories_block-category-text{
 	max-width: 125px;
 }
 /* ========================================================================
   Стили блока со слайдером / Block with slider styles
 ======================================================================== */
+.slick_slider-item img{
+	width: 100%;
+}
 .slick-dots{
 	list-style: none;
 	padding: 0;
@@ -408,23 +495,216 @@ hr{
 	background: linear-gradient(to bottom,  rgba(247,247,247,1) 0%,rgba(239,239,239,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efefef',GradientType=0 );
 }
+.links_bars_block-link:hover{
+	box-shadow: 5px 5px 7px -4px rgba(0,0,0,0.3);
+}
 .links_bars_block-link-marker{
 	top: 26px;
-	left: 20px;
+	left: 15px;
 	width: 20px;
 	height: 20px;
 	background: url('/images/active-icon.png');
 	background-repeat: no-repeat;
+	transform: translate3d(5px,0,0);
+}
+.links_bars_block-link:hover .links_bars_block-link-marker{
+	-webkit-animation-delay: 0.2s;
+	-webkit-animation-name: marker-shake;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0.2s;
+	animation-name: marker-shake;
+	animation-duration: 2s;
+	animation-iteration-count:infinite;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes marker-shake {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	50% {
+		transform: translate3d(10px,0,0);
+	}
+	100% {
+		transform: translate3d(0,0,0);
+	}
+}
+@keyframes marker-shake {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	50% {
+		transform: translate3d(10px,0,0);
+	}
+	100% {
+		transform: translate3d(0,0,0);
+	}
 }
 /* ========================================================================
   Стили блока табов с преимуществами / Advantages-tabs block styles
 ======================================================================== */
-.advantages-switcher-item{
-
+.advantages-content{
+	background: #f0f0f0;
+	padding: 35px 40px;
+}
+.advantages-content-tabs{
+	z-index: 1;
+}
+.advantages-svg-triangle{
+	bottom: -7px;
+	left: 0;
+	right: 0;
+	z-index: 0;
+}
+.advantages-svg-triangle svg{
+	fill: #dadbdc;
+}
+.advantages-switcher-title,
+.advantages-switcher{
+	padding-left: 10px;
+}
+.advantages-switcher-item a{
+	position: relative;
+}
+.advantages-switcher-item a:before{
+	content: "";
+	width: 18px;
+	height: 12px;
+	background-image: url('../images/active-icon.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: -25px;
+	margin-top: -6px;
+	transform: rotate(180deg);
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+.advantages-switcher-item a.active:before{
+	opacity: 1;
+	transition: all 0.2s ease;
 }
 /* ========================================================================
-  Стили футера / Footer styles
+	Стили блока новостей на главной / News block home styles
 ======================================================================== */
+.news_block-link a{
+	margin-top: 10px;
+	display: inline-block;
+	line-height: 20px;
+	color: #636363;
+	border-bottom: 1px solid #d0d0d0;
+}
+.news_block-link a:hover{
+	color: #636363;
+	border-color: transparent;
+}
+.news_block-list-item-image{
+	height: 260px;
+	border: 1px solid #a6a6a6;
+	overflow: hidden;
+}
+.news_block-list-item-image a{
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.3s ease;
+}
+.news_block-list-item-image:hover a{
+	transition: all 0.3s ease;
+	transform: scale(1.3) rotate(12deg);
+}
+.news_block-list-item-image a:after{
+	content: "";
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+.news_block-list-item-image:hover a:after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.4);
+	transition: all 0.3s ease;
+}
+.news_block-list-item-text{
+	min-height: 48px;
+}
+.news_block-list-item-title{
+	display: inline;
+	border-bottom: 2px solid transparent;
+}
+.news_block-list-item-title:hover{
+	color: #ff4800;
+	border-color: #ff4800;
+}
+/* ========================================================================
+	Стили блока с картой / Map block styles
+======================================================================== */
+.map_block{
+	margin-top: 50px;
+}
+.map_block-map{
+	height: 260px;
+}
+/* ========================================================================
+	Стили блока с картой / Map block styles
+======================================================================== */
+.map_block{
+	margin-top: 50px;
+}
+.map_block-map{
+	height: 260px;
+}
+/* ========================================================================
+	Стили слайдера с марками авто / Cars marks slider styles
+======================================================================== */
+.car_brands {
+	margin-top: 60px;
+}
+.slick_slideset{
+	padding: 0 30px;
+	margin: 0;
+}
+.slick_slideset .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	background: transparent;
+	border: none;
+	color: #707070;
+}
+.slick_slideset .slick-arrow:hover{
+	color: #ff4800;
+}
+.slick_slideset .slick-prev{
+	left: 0;
+}
+.slick_slideset .slick-next{
+	right: 0;
+}
+.slick_slideset .slick-arrow:before{
+	font-family: 'iconfont';
+	font-size: 26px;
+}
+.slick_slideset .slick-prev:before{
+	content: "\e905";
+}
+.slick_slideset .slick-next:before{
+	content: "\e906";
+}
+.slick_slideset-item{
+	padding: 0 13px;
+}
+/* ========================================================================
+	Стили футера / Footer styles
+======================================================================== */
+.footer{
+	margin-top: 70px;
+}
 .footer-links_one-list ul,
 .footer-links_two-list ul{
 	margin: 0;
@@ -450,8 +730,17 @@ hr{
 .footer-links_two-list a{
 	color: #1f1f1f;
 }
+.footer-links_one-list a:hover,
+.footer-links_two-list a:hover{
+	color: #ff4800;
+}
 .medialine_copyrate-link{
 	color: #ff4800;
+	border-bottom: 1px solid transparent;
+}
+.medialine_copyrate-link:hover{
+	color: #ff4800;
+	border-color: #ff4800;
 }
 /* ========================================================================
   Медиа запросы / Media queries
@@ -476,6 +765,9 @@ hr{
 	.header-phones-list{
 		font-size: 17px;
 	}
+	.news_block-list-item-image{
+		height: 220px;
+	}
 }
 @media (max-width: 991px){
 	.w-md-100{
@@ -487,8 +779,25 @@ hr{
 	.search{
 		width: 100%;
 	}
-
-
+	.news_block-list-item{
+		margin-bottom: 20px !important;
+	}
+	.news_block-list-item-text{
+		min-height: inherit;
+	}
+	.advantages-switcher-title{
+		padding: 0;
+	}
+	.advantages-switcher{
+		margin-left: -10px;
+		padding: 0;
+	}
+	.advantages-switcher-item{
+		margin-left: 10px;
+	}
+	.advantages-switcher-item a:before{
+		content: none;
+	}
 	.footer-links_one-list li:first-child:before{
 		content: none;
 	}
@@ -556,8 +865,13 @@ hr{
 	.search{
 		width: 70%;
 	}
-
-
+	.button {
+		padding: 0 14px;
+	}
+	.header-left {
+		padding: 10px 20px 10px 0;
+		min-height: 80px;
+	}
 	.footer-links_one-list,
 	.footer-links_two-list{
 		margin-top: 15px
@@ -569,5 +883,8 @@ hr{
 	.footer-links_one-list li:before,
 	.footer-links_two-list li:nth-child(n+2):before{
 		content: none;
+	}
+	.footer-address-row{
+		font-size: 17px;
 	}
 }
