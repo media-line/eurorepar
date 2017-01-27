@@ -25,6 +25,19 @@
 		<script type="text/javascript" src="js/slick.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 
+		<!--[if lte IE 10]>
+			<script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script>
+		<![endif]-->
+		<!--[if lte IE 9]>
+		     <script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if IE 9]>
+			<link href="css/ie9.css" rel="stylesheet">
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<link href="css/ie8.css" rel="stylesheet">
+		<![endif]-->
+
 		<!-- Title -->
 		<title>Eurorepar</title>
 		
@@ -49,7 +62,7 @@
 					</div>
 
 					<div class="col-sm-12 col-md-3 col-lg-2">
-						<div class="header-right position-relative h-100 d-flex flex-wrap flex-sm-nowrap flex-md-wrap align-items-center justify-content-around justify-content-md-right">
+						<div class="header-right position-relative h-100 d-flex flex-wrap flex-sm-nowrap flex-md-wrap align-items-center justify-content-between justify-content-md-right">
 
 							<div class="header-socials text-center text-md-right mb-sm-0 mb-md-2">
 								<a href="https://www.facebook.com/" class="header-socials-link header-socials-link-facebook d-inline-block position-relative" target="_blank"></a>
@@ -60,7 +73,7 @@
 
 							<div class="header-phones text-center text-md-right">
 								<div class="header-phones text-contrast d-flex justify-content-center justify-content-sm-around align-items-center flex-wrap flex-sm-nowrap flex-md-wrap">
-									<ul class="header-phones-list text-large font-weight-bold p-0 mb-md-3 ml-md-0">
+									<ul class="header-phones-list text-large font-weight-bold p-0 mb-md-2 ml-md-0">
 										<li>
 											<a href="tel:+375 29 123-45-67" class="text-contrast">
 												+375 29 123-45-67
@@ -68,14 +81,13 @@
 										</li>
 									</ul>
 
-									<div class="header-phones-link text-uppercase text-smaller ml-4 ml-md-4 w-md-100">
-
-										<a class="text-contrast" href="#" data-toggle="modal" data-target="#feedback_modal">Написать нам</a>
-									</div>
 								</div>
 							</div>
 
+							<div class="header-right-link text-uppercase text-smaller text-bold ml-md-4 ml-md-4">
+								<a class="text-contrast" href="#" data-toggle="modal" data-target="#feedback_modal">Написать нам</a>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -92,8 +104,8 @@
 					<span></span>
 				</button>
 
-				<div class="w-100 d-flex flex-column flex-column-reverse flex-md-row flex-wrap flex-lg-nowrap justify-content-lg-between">
-					<div class="d-flex align-items-center w-md-100">
+				<div class="navbar-wrapper w-100 d-flex flex-column flex-column-reverse flex-md-row flex-wrap flex-lg-nowrap justify-content-lg-between">
+					<div class="navbar-menu-wrapper d-flex align-items-center w-md-100">
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="main-menu navbar-nav p-0 m-0 w-md-100 d-flex justify-content-between justify-content-lg-start">
 								<li class="nav-item active"><a href="#">Услуги</a></li>
@@ -107,7 +119,7 @@
 						</div>
 					</div>
 
-					<div class="d-flex align-items-center w-md-100">
+					<div class="navbar-search-wrapper d-flex align-items-center justify-content-end  w-md-100">
 						<div class="search my-2 my-lg-0 d-flex flex-lg-nowrap justify-content-lg-end">
 							<form class="form position-relative w-100">
 								<input class="form-input form-search-input w-100" type="text" placeholder="Поиск по сайту"/>
@@ -124,9 +136,9 @@
 		<section class="top-a">
 			<div class="categories_block">
 				<div class="container">
-					<div class="d-flex flex-wrap justify-content-between margin-top-large">
+					<div class="d-flex flex-wrap justify-content-center justify-content-xl-between mt-3">
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape1.png">
 							</a>
@@ -135,7 +147,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape2.png">
 							</a>
@@ -144,7 +156,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape3.png">
 							</a>
@@ -153,7 +165,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-0">
 							<a href="#">
 								<img src="images/shape4.png">
 							</a>
@@ -162,7 +174,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape5.png">
 							</a>
@@ -171,7 +183,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape6.png">
 							</a>
@@ -180,7 +192,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape7.png">
 							</a>
@@ -189,7 +201,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape8.png">
 							</a>
@@ -198,7 +210,7 @@
 							</div>
 						</div>
 
-						<div class="categories_block-category text-center mb-4">
+						<div class="categories_block-category text-center mb-3 mb-xl-0">
 							<a href="#">
 								<img src="images/shape9.png">
 							</a>
@@ -272,7 +284,7 @@
 			<div class="advantages margin-top-large">
 				<div class="container">
 
-					<div class="h1 text-dark mb-3">
+					<div class="advantages-title h1 text-dark mb-3">
 						Почему стоит выбрать нас?
 					</div>
 

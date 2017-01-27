@@ -26,6 +26,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.icon-caret-arrow-up:before {
+	content: "\e907";
+}
 .icon-left-arrow:before {
 	content: "\e905";
 }
@@ -221,7 +224,6 @@ form input + button {
 }
 .close:hover{
 	opacity: 1;
-	/*transform: rotate(90deg);*/
 	transition: all 0.5s ease;
 }
 /* ========================================================================
@@ -231,9 +233,9 @@ form input + button {
 	background: #1f1f1f;
 }
 .header-left{
-	padding: 20px 60px 20px 0;
+	padding: 10px 60px 10px 0;
 	background: #fff;
-	min-height: 123px;
+	min-height: 103px;
 }
 .header-left:before,
 .header-center:before,
@@ -264,7 +266,7 @@ form input + button {
 	max-width: 100%;
 }
 .header-center{
-	padding: 15px 80px 15px 0;
+	padding: 10px 80px 10px 0;
 }
 .header-center,
 .header-center:before{
@@ -321,18 +323,21 @@ form input + button {
 	list-style: none;
 	margin: 0;
 	line-height: 1;
+	white-space: nowrap;
 }
 .header-phones{
 	outline: none;
 }
-.header-phones a:focus{
+.header-phones a:focus,
+.header-right-link a{
 	color: #fff;
 }
-.header-phones a:hover{
+.header-phones a:hover,
+.header-right-link a:hover{
 	color: #ff4800;
 }
 /* ========================================================================
-  Стили шапки/ Header styles
+  Стили блока с меню/ Menu styles
 ======================================================================== */
 .navbar{
 	background: #d9dadc;
@@ -350,7 +355,8 @@ form input + button {
 }
 .main-menu a{
 	color: #1f1f1f;
-	font-size: 12px;
+	font-size: 13px;
+	font-weight: 500;
 	text-transform: uppercase;
 	border-bottom: 2px solid transparent;
 }
@@ -370,7 +376,7 @@ form input + button {
 	height: 36px;
 	border: none;
 	top: 7px;
-	right: 5px;
+	left: 5px;
 }
 .navbar-toggler span{
 	height: 4px;
@@ -428,6 +434,9 @@ form input + button {
 /* ========================================================================
   Стили блока категорий / Categories block styles
 ======================================================================== */
+.categories_block-category{
+	width: 11.1%
+}
 .categories_block-category a{
 	display: inline-block;
 	transition: all 0.3s ease;
@@ -438,10 +447,6 @@ form input + button {
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-}
-.categories_block-category-text{
-	max-width: 125px;
 }
 /* ========================================================================
   Стили блока со слайдером / Block with slider styles
@@ -651,15 +656,6 @@ form input + button {
 	height: 260px;
 }
 /* ========================================================================
-	Стили блока с картой / Map block styles
-======================================================================== */
-.map_block{
-	margin-top: 50px;
-}
-.map_block-map{
-	height: 260px;
-}
-/* ========================================================================
 	Стили слайдера с марками авто / Cars marks slider styles
 ======================================================================== */
 .car_brands {
@@ -719,7 +715,7 @@ form input + button {
 	content: "|";
 	margin-right: 5px;
 }
-.footer-links_two-list li:nth-child(n+2):before{
+.footer-links_two-list li + li:before{
 	content: "/";
 	margin: 0 7px 0 3px;
 	color: #ff4800;
@@ -743,13 +739,166 @@ form input + button {
 	border-color: #ff4800;
 }
 /* ========================================================================
+  Стили хлебных крошек / Breadcrumb styles
+======================================================================== */
+.breadcrumb{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: transparent;
+}
+.breadcrumb ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.breadcrumb li{
+	display: inline-block;
+	color: #808080;
+	position: relative;
+}
+.breadcrumb li + li{
+	margin-left: 15px;
+}
+.breadcrumb li + li:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-left: 5px solid #ff4800;
+	border-bottom: 4px solid transparent;
+}
+.breadcrumb a{
+	color: #808080;
+}
+.breadcrumb a:hover{
+	color: #ff4800;
+}
+/* ========================================================================
+  Стили артиклей, текстовых страниц / Articles styles
+======================================================================== */
+.article-date{
+	background: #ff4800;
+	padding: 0 15px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #fff;
+	font-weight: bold;
+	position: relative;
+}
+.article-date:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -10px;
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-left: 10px solid #ff4800;
+	border-bottom: 15px solid transparent;
+}
+.article-content-image{
+	max-width: 415px;
+}
+.article-content-image img{
+	width: 100%;
+}
+.articles_list-teaser + .articles_list-teaser{
+	margin-top: 40px;
+}
+.readmore{
+	color: #808080;
+	border-bottom: 1px solid #979797;
+}
+.readmore:focus{
+	color: #808080;
+}
+.readmore:hover{
+	color: #ff4800;
+	border-color: transparent;
+}
+/* ========================================================================
+  Стили пагинации / Pagination styles
+======================================================================== */
+.pagination {
+	justify-content: flex-end;
+	margin-top: 40px;
+}
+.pagination ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.pagination li{
+	display: inline-block;
+}
+.pagination li + li{
+	margin-left: 10px;
+}
+.pagination li > a{
+	color: #1f1f1f;
+	border-bottom: 1px solid #8b8b8b;
+}
+.pagination li > a:hover,
+.pagination .active,
+.pagination .active > span{
+	color: #ff4800;
+	border-color: transparent;
+}
+.pagination-prev > a,
+.pagination-next > a{
+	position: relative;
+	border-color: transparent !important;
+}
+.pagination-prev > a:after,
+.pagination-next > a:after{
+	content: "\e907";
+	font-family: 'iconfont';
+	font-size: 14px;
+	color: #ff4800;
+	display: inline-block;
+	text-shadow: 0px -1px 0px rgba(120, 120, 120, 1);
+	transition: all 0.2s ease;
+}
+.pagination-prev > a:after{
+	transform: rotate(-90deg);
+}
+.pagination-next > a:after{
+	transform: rotate(90deg);
+}
+.pagination-prev > a:hover:after,
+.pagination-next > a:hover:after{
+	color: rgba(120, 120, 120, 1);
+	transition: all 0.2s ease;
+}
+/* ========================================================================
   Медиа запросы / Media queries
 ======================================================================== */
 @media (min-width: 768px){
+	.header-phones,
+	.header-right-link {
+		width: 100%;
+	}
+	.header-right-link {
+		text-align: right;
+	}
 	.header-socials,
 	.header-phones-list,
 	.header-phones-link{
 		width: 100%;
+	}
+}
+@media (min-width: 1220px){
+	.categories_block-category{
+		width: auto;
+	}
+	.categories_block-category-text{
+		max-width: 125px;
 	}
 }
 @media (min-width: 1200px){
@@ -769,6 +918,11 @@ form input + button {
 		height: 220px;
 	}
 }
+@media (max-width: 1219px){
+	.categories_block-category{
+		width: 17%
+	}
+}
 @media (max-width: 991px){
 	.w-md-100{
 		width: 100%;
@@ -778,6 +932,9 @@ form input + button {
 	}
 	.search{
 		width: 100%;
+	}
+	.categories_block-category{
+		width: 20%
 	}
 	.news_block-list-item{
 		margin-bottom: 20px !important;
@@ -801,13 +958,19 @@ form input + button {
 	.footer-links_one-list li:first-child:before{
 		content: none;
 	}
+	.articles_list-tease-col_text{
+		order: 2;
+	}
+	.articles_list-tease-col_text{
+		order: 1;
+	}
 }
 @media (max-width: 767px){
 	.w-sm-100{
 		width: 100%;
 	}
 	.header{
-		background: #fff;
+		background: #ff4800;
 		overflow: hidden;
 	}
 	.header-center {
@@ -816,9 +979,11 @@ form input + button {
 	.header-right{
 		background: #1f1f1f;
 	}
-	.header-left:before,
 	.header-left:after{
 		content: none;
+	}
+	.header-left:before{
+		width: 100vw;
 	}
 	.header-right:before,
 	.header-right:after{
@@ -843,24 +1008,29 @@ form input + button {
 	.search{
 		width: 80%;
 	}
-
-
+	.categories_block-category{
+		width: 33%
+	}
 	.footer-buttons-button{
 		margin-top: 20px
 	}
+	.article-content-image{
+		max-width: 100%;
+		float: none;
+	}
 }
 @media (max-width: 575px){
-	.header-socials,
-	.header-phones-list,
-	.header-phones-link{
+	.header{
+		background: #fff;
+	}
+	/*.header-socials,
+	.header-phones,
+	.header-right-link{
 		width: 100%;
-	}
-	.header-phones-list,
-	.header-phones-link{
-		margin: 15px 0 0 0 !important;
-	}
+	}*/
 	.navbar-toggleable-sm > .container {
 		min-width: 290px;
+		width: 100%;
 	}
 	.search{
 		width: 70%;
@@ -871,6 +1041,9 @@ form input + button {
 	.header-left {
 		padding: 10px 20px 10px 0;
 		min-height: 80px;
+	}
+	.categories_block-category{
+		width: 50%
 	}
 	.footer-links_one-list,
 	.footer-links_two-list{
@@ -886,5 +1059,21 @@ form input + button {
 	}
 	.footer-address-row{
 		font-size: 17px;
+	}
+}
+@media (max-width: 459px){
+	.header-phones-list,
+	.header-phones-link{
+		margin: 15px 0 0 0 !important;
+	}
+	.header-phones{
+		width: 100%;
+		text-align: right;
+		order: 2;
+	}
+	.header-right-link{
+		align-self: flex-start;
+		order: 1;
+		margin-top: 8px;
 	}
 }

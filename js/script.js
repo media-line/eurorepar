@@ -1,12 +1,11 @@
 jQuery(function($) {
     $(document).ready(function () {
-        
+
         $('.js-slick-slider').slick({
             autoplay: true,
             dots: true,
             arrows: false
         });
-    
 
         $('.js-slick-slideset').slick({
             dots: false,
@@ -19,7 +18,11 @@ jQuery(function($) {
             prevArrow: '<a href="#" class="slick-prev"></a>',
             nextArrow: '<a href="#" class="slick-next"></a>'
         });
-        
+
+        if($('*').is(".fancybox")){
+            $(".fancybox").fancybox();
+        }
+
     });
 
 
